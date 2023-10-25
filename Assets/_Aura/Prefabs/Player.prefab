@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7109609472137804242}
-  - component: {fileID: 2372962056129910177}
+  - component: {fileID: 6062585149630435966}
   m_Layer: 0
   m_Name: TurretParent
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 3649622316409842290}
   m_Father: {fileID: 2209414610548850853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2372962056129910177
+--- !u!114 &6062585149630435966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4721550962351012647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 351413fcee77da7428cb105941d62a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 0
@@ -241,7 +241,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2209414610548850853}
   - component: {fileID: 6564799581685952030}
-  - component: {fileID: -2608451686009268742}
+  - component: {fileID: 9205168736597862749}
+  - component: {fileID: 5981908958816888918}
+  - component: {fileID: 2496959595368016949}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -286,7 +288,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &-2608451686009268742
+--- !u!114 &9205168736597862749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6196748866680374991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 351413fcee77da7428cb105941d62a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -316,6 +318,51 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!50 &5981908958816888918
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196748866680374991}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2496959595368016949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196748866680374991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f94c120aa41bf346a4c2284d2d36056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 3d1a05645b386aa408ace3fa0cea3ea6, type: 2}
+  playerTransform: {fileID: 2209414610548850853}
+  tankBodyTransform: {fileID: 3327685088731819244}
+  playerRB: {fileID: 5981908958816888918}
+  playerMoveSpeed: 5
+  tankBodyTurnRate: 90
 --- !u!1 &6789075288121987940
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3327685088731819244}
-  - component: {fileID: 410455214578549147}
+  - component: {fileID: 522888564391782366}
   - component: {fileID: 5794498675457926772}
   - component: {fileID: 6405471742826041663}
   m_Layer: 0
@@ -351,7 +398,7 @@ Transform:
   - {fileID: 2703132103363968419}
   m_Father: {fileID: 2209414610548850853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &410455214578549147
+--- !u!114 &522888564391782366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6789075288121987940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 351413fcee77da7428cb105941d62a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 0

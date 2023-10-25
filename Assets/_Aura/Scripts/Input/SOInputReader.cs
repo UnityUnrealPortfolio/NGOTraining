@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
+[CreateAssetMenu(menuName ="New Input reader")]
 public class SOInputReader : ScriptableObject, Controls.IPlayerActions
 {
     public event Action<bool> OnPlayerPrimaryFire;
